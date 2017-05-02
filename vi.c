@@ -194,10 +194,8 @@ vi_mode(GtkWidget *widget, GdkEventKey *event) {
 			break;
 		case GDK_Return:
 		case GDK_ISO_Enter:
-			move(widget, Line, 1, 0);
-			obj = ParaEnd;
-			m = -1;
-			break;
+			mode = Insert;
+			return TRUE;
 		case GDK_A:
 			mode = Insert;
 			/* FALLTHROUGH */
